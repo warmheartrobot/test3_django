@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSRF</title>
+</head>
+<body>
+    <form action="/csrf1/" method="post">
+        {# 生成CSRF进行安全验证 #}
+        {% csrf_token %}
+        <input type="text" name="uname">
+        <br>
+        <input type="text" name="money">
+        <br>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

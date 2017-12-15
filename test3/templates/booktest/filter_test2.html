@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义过滤器</title>
+</head>
+<body>
+    {% comment %}
+        这里是注释的代码
+    {% endcomment %}
+    {% load filters %} <!-- load标签引入自定义过滤器 -->
+    图书列表：
+    <ul>
+        {% for book in list %}
+            {% if book.id|mod %}
+                <li style="background-color: red;">
+                    {{ book.btitle }}
+                    ---默认时间格式为：
+                    {{ book.bpub_date }}
+                </li>
+            {% else %}
+                <li style="background-color: blue;">
+                    {{ book.btitle }}
+                    ---格式化时间格式为：
+                    {{ book.bpub_date|date:"Y-m-j" }}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>

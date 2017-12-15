@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h2>这是头</h2>
+    <hr>
+    {% block zone1 %}
+    这是区域一，有默认值
+    {% endblock zone1 %}
+    <hr>
+    {% block zone2 %}
+    {% endblock zone2 %}
+    <hr>
+    <h2>这是尾</h2>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends 'booktest/inherit_base.html' %}
+    {% block zone2 %}
+        <ul>
+            {% for book in list %}
+            <li>{{ book.btitle }}</li>
+            {% endfor %}
+        </ul>
+    {% endblock zone2 %}
+</body>
+</html>

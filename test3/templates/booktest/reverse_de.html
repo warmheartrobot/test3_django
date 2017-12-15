@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>反向解析</title>
+</head>
+<body>
+    <a href="/reverse_de123">跳转到reverse_de1</a>
+    <br>
+    {# 根据url动态生成地址 #}  {# ：后面不能有空格#}
+    <a href="{% url 'booktest:reverse_de1' %}">动态地址跳转到reverse1</a>
+    <br>
+    <a href="{% url 'booktest:reverse3' 18 188%}">动态地址和正则传参跳转到reverse3</a>
+</body>
+</html>

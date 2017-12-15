@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转义</title>
+</head>
+<body>
+{#    自动转义：{{ title }}#}
+    {# 上面写法等同于：{{ title|escape }} 都是转义#}
+{#    <hr>#}
+{#    不转义: {{ title|safe }}#}
+{#    <hr>#}
+{#    转义：{{ title2 }}#}
+{#    <hr>#}
+{#    不转义： {{ title2|safe }}#}
+
+    {% autoescape on %}
+        自动转义：{{ title }}
+        {# 上面写法等同于：{{ title|escape }} 都是转义#}
+        <hr>
+        不转义: {{ title|safe }}
+        <hr>
+        转义：{{ title2 }}
+        <hr>
+        不转义： {{ title2|safe }}
+    {% endautoescape %}
+</body>
+</html>
